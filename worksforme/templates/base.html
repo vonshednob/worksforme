@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Soundboard</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="sidebar">
+<div><input id="searchbar" placeholder="Search sound…" type="text" autofocus></div>
+<div><input id="basevolume" type="range" min="0" max="100" value="75" title="Base volume"></div>
+<ul id="library"></ul>
+<ul id="sets"></ul>
+</div>
+<div id="main">
+<div id="set_controls">
+    <div>
+        <span><input type="text" placeholder="Set name" id="set_name">
+              <button id="btnsaveset">Save as set</button></span>
+
+        <button id="btnclear">Clear all sounds</button>
+    </div>
+</div>
+<div id="sounds">
+</div>
+<div>
+</div>
+</body>
+</html>
