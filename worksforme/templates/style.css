@@ -280,17 +280,21 @@ html {
 }
 
 html, body {
-    --background: var(--color-blue-grey-50);
+    --background: var(--color-blue-grey-100);
     --text: var(--color-blue-grey-900);
 
     background-color: var(--background);
     color: var(--text);
 
     font-family: roboto,sans-serif;
+    margin: 0;
+    padding: 0;
 }
-body {
+body > div {
     display: flex;
     flex-direction: row;
+    width: 100vw;
+    height: 100vh;
 }
 .card.hide {
     display: none;
@@ -302,6 +306,11 @@ body {
     background-color: var(--color-blue-grey-100);
     border-radius: 5px;
 }
+#main,
+#sidebar {
+    padding: 0.3rem;
+}
+
 #sidebar,
 #sounds {
     display: flex;
@@ -315,6 +324,9 @@ body {
     height: 99vh;
     overflow: auto;
 }
+#sidebar > div {
+    display: flex;
+}
 #sidebar ul {
     margin: 0;
     padding: 0;
@@ -323,14 +335,23 @@ body {
     height: 50%;
     overflow: auto;
 }
+#sidebar h2,
+#main h2 {
+    margin:0.5rem 0;
+    padding:0;
+}
 #sidebar li {
 }
 #sidebar li h1 {
     padding: 0;
     margin: 0;
     white-space: nowrap;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 #sidebar li h1 span {
+    margin: 0 0.5rem;
     font-size: 0.95rem;
 }
 #sidebar li h2 {
@@ -342,8 +363,13 @@ body {
 #main {
     flex-grow: 2;
     align-items: stretch;
+    background-color: var(--color-blue-grey-50);
 }
 #sounds {
+}
+#stage_controls {
+    display: flex;
+    justify-content: space-between;
 }
 .card.player {
     display: flex;
